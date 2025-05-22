@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #232526, #414345); /* Sleek Monochrome Gradient */
+    color: #f9f9f9;
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    width: 620px;
+    padding: 50px;
+    background: linear-gradient(145deg, #3a3a3a, #2e2e2e); /* Softer 3D Effect */
+    border-radius: 24px;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.75);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 30px;
+    font-size: 38px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Stopwatch Display */
+#stopwatch {
+    font-size: 60px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    background: linear-gradient(to right, #4facfe, #38f9d7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 3px 16px rgba(0, 255, 255, 0.5);
+}
+
+/* Buttons */
+.buttons button {
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.25s ease-in-out;
+}
+
+/* Individual Button Styles */
+#startBtn {
+    background: linear-gradient(135deg, #43e97b, #38f9d7); /* Fresh Green */
+    color: #fff;
+}
+
+#stopBtn {
+    background: linear-gradient(135deg, #ff4e50, #f9d423); /* Red to Orange */
+    color: #fff;
+}
+
+#resetBtn {
+    background: linear-gradient(135deg, #ffe259, #ffa751); /* Sunny Yellow */
+    color: #333;
+}
+
+#lapBtn {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Vivid Indigo-Blue */
+    color: #fff;
+}
+
+/* Button Hover Effect */
+.buttons button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+/* Lap List */
+#laps {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+#laps li {
+    background: linear-gradient(to right, #434343, #000000);
+    padding: 12px 18px;
+    margin: 10px 0;
+    border-radius: 10px;
+    color: #fafafa;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 92%;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    #stopwatch {
+        font-size: 48px;
+    }
+
+    .buttons button {
+        padding: 12px 22px;
+        font-size: 16px;
+    }
+}
+
+/* Optional Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
